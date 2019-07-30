@@ -28,6 +28,10 @@ public class DemoService {
 		 */
 		return list;
 	}
+	@RequestMapping("/")
+	public String getWelcomeMessage() {
+		return "welcome to spring";
+	}
 
 	@RequestMapping(value = "add_user", method = RequestMethod.POST)
 	public String addUser(@RequestBody User user) {
